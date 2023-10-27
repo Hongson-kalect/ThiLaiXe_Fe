@@ -1,0 +1,58 @@
+$primary-color: #141484;
+$main-background: rgb(241, 241, 241);
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+@keyframes in {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: var(--scale);
+  }
+}
+
+@keyframes out {
+  from {
+    scale: var(--scale);
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    height: 0px;
+    transform: scaleY(0);
+  }
+
+  to {
+    height: var(--content-height);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes disappear {
+  from {
+    height: var(--content-height);
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  to {
+    height: 0px;
+    opacity: 0;
+    transform: scaleY(0);
+    display: none;
+  }
+}

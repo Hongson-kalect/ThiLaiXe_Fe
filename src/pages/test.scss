@@ -1,0 +1,13 @@
+.wrap{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+img{
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid red;
+    height: 500px;
+    object-fit: contain;
+    margin-top: 12px;
+}

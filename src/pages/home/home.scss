@@ -1,0 +1,49 @@
+@import "../../assets/font/global.scss";
+
+.welcome {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("https://1.bp.blogspot.com/-QsCpiJJmqso/XlSCCNdONxI/AAAAAAAAAR8/G-1fBqlNR-Anh4OYO6gN1SKTyzfmy5kfQCLcBGAsYHQ/s1600/hoc-bang-b2-la-gi.jpg")
+      center center no-repeat;
+  color: white;
+  background-size: cover;
+
+  .title {
+    font-size: 32px !important;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .sub-title {
+    font-weight: 500;
+    font-size: 28px !important;
+  }
+
+  .card-item {
+    transition: all 0.2s linear;
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+.home-page {
+  .top {
+    margin-top: 4px;
+    div {
+      color: #c75959;
+      font-weight: bold;
+      font-size: 40px !important;
+    }
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 42px;
+    flex-wrap: wrap;
+    .item {
+      width: 20%;
+      height: 75%;
+    }
+  }
+}

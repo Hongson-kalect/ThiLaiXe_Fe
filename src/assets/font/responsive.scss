@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1000px) {
+  p,
+  div,
+  span {
+    font-size: 12px !important;
+  }
+
+  .right-nav {
+    width: 35% !important;
+    .question-label {
+      width: 32px !important;
+      padding: 2px 4px !important;
+    }
+  }
+
+  //   .do-exam-page {
+  //     .right-nav {
+  //       & > .top {
+  //         height: 100px !important;
+  //       }
+  //     }
+  //   }
+
+  .left-nav {
+    width: 0 !important;
+  }
+  .content {
+    flex: 1;
+  }
+}

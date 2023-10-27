@@ -1,0 +1,134 @@
+.test-option-page {
+  .top {
+    padding: 8px;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      color: #c75959;
+      font-weight: bold;
+      font-size: 32px !important;
+    }
+
+    p {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    b {
+      font-size: 32px;
+      color: #054634;
+    }
+  }
+  .menu {
+    .top {
+      margin: 8px;
+      flex-direction: column;
+      align-items: center;
+
+      .title {
+        color: #c75959;
+        font-weight: bold;
+        font-size: 32px !important;
+      }
+
+      p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      b {
+        font-size: 32px;
+        color: #054634;
+      }
+    }
+    .list {
+      padding: 32px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      .item {
+        width: 300px;
+        height: 200px;
+
+        .home-menu-item {
+          .decribe {
+            --content-height: 120px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.test-list {
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(148, 0, 221);
+  }
+
+  .content {
+    padding: 12px 20px;
+
+    .exam-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px 36px;
+
+      .test-item {
+        padding: 8px 12px;
+        background-color: blue;
+        color: white;
+        border: 2px solid blue;
+
+        font-size: 18px;
+        font-weight: 600;
+        min-width: 80px;
+        border-radius: 12px;
+        text-align: center;
+
+        opacity: 0.7;
+        --scale: 1.05;
+        animation: out 0.3s;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        &.examed {
+          background-color: rgb(98, 98, 255);
+          color: slategray;
+        }
+
+        &:hover {
+          background-color: white;
+          color: blue;
+          animation: in 0.3s forwards;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .bottom {
+    padding-top: 8px;
+  }
+}
+
+.exam-warning {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.test-options-help-modal {
+  padding: 4px 8px;
+
+  ul {
+    list-style: none;
+    li + li {
+      margin-top: 8px;
+    }
+  }
+}

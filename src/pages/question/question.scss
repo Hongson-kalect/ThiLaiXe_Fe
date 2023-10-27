@@ -1,0 +1,333 @@
+.question-page {
+  & > .top {
+    flex-wrap: wrap;
+    input {
+      padding: 4px 8px;
+      height: 32px;
+      outline: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+    }
+
+    .help {
+      cursor: pointer;
+      svg {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .question-list-layout {
+    & > .top {
+      font-size: 24px;
+    }
+
+    .question-list {
+      padding: 0px 12px;
+
+      .question-list-item {
+        border-top: 4px solid #eee;
+        margin-top: 12px;
+        .title {
+          margin-bottom: 16px;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1.5;
+          color: rgb(29, 20, 87);
+          & span {
+            line-height: 1.5;
+            font-size: 22px;
+          }
+
+          &.require {
+            color: red;
+          }
+        }
+        .image {
+          margin: 16px 0 32px 64px;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 200px;
+          img {
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .anser {
+          margin-left: 64px;
+          font-size: 18px;
+          font-weight: 500;
+          & + .anser {
+            margin-top: 10px;
+          }
+
+          &.correct {
+            color: #1e8b8d;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 600;
+          }
+        }
+      }
+      .question-list-item:first-child {
+        border: none;
+        margin-top: 32px;
+      }
+      .question-list-item:last-child {
+        margin-bottom: 32px;
+      }
+    }
+
+    .right-nav {
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 8px 4px;
+      }
+      .question-label-list {
+        padding: 8px 12px;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+        overflow: auto;
+
+        .question-label {
+          text-align: center;
+          width: 68px;
+          padding: 4px 8px;
+          border: 2px solid #09ac19;
+          color: black;
+          font-size: 14px;
+          --scale: 1.05;
+
+          cursor: pointer;
+          animation: out 0.2s;
+          transition: all 0.2s linear;
+
+          &:hover {
+            color: #09ac19;
+            background-color: rgb(246, 246, 246);
+            animation: in 0.2s forwards;
+          }
+
+          &.active {
+            background-color: #09ac19;
+            color: white;
+            scale: 1.05;
+          }
+        }
+      }
+    }
+  }
+
+  .question-each-layout {
+    .question-info {
+      padding: 8px 12px;
+      .title {
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: rgb(29, 20, 87);
+        & span {
+          line-height: 1.5;
+          font-size: 24px;
+        }
+
+        &.require {
+          color: red;
+        }
+      }
+      .image {
+        margin: 16px 0 32px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 250px;
+
+        img {
+          height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+        }
+
+        &.loading {
+          opacity: 0.1;
+        }
+      }
+
+      .anser {
+        margin-left: 64px;
+        font-size: 20px;
+        font-weight: 500;
+        & + .anser {
+          margin-top: 12px;
+        }
+
+        &.correct {
+          color: #1e8b8d;
+          font-size: 24px;
+          font-style: italic;
+          font-weight: 600;
+        }
+      }
+    }
+    .right-nav {
+      p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 8px 4px;
+      }
+      .question-label-list {
+        padding: 8px 12px;
+        max-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px 20px;
+        overflow: auto;
+
+        .question-label {
+          text-align: center;
+          width: 68px;
+          padding: 4px 8px;
+          border: 2px solid #09ac19;
+          color: black;
+          font-size: 14px;
+          --scale: 1.05;
+
+          cursor: pointer;
+          animation: out 0.2s;
+          transition: all 0.2s linear;
+
+          &:hover {
+            color: #09ac19;
+            background-color: rgb(246, 246, 246);
+            animation: in 0.2s forwards;
+          }
+
+          &.active {
+            background-color: #09ac19;
+            color: white;
+            scale: 1.05;
+          }
+        }
+      }
+    }
+  }
+
+  .explain {
+    margin-top: 12px;
+    margin-left: 8px;
+    font-size: 18px;
+    color: #ff4900;
+  }
+}
+
+.questions-help-modal {
+  padding: 4px 8px;
+
+  ul {
+    list-style: none;
+    li + li {
+      margin-top: 8px;
+    }
+  }
+}
+
+.training-modal {
+  .top {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    .title {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+  }
+  .training-item {
+    padding: 4px 8px;
+    .title {
+      margin-bottom: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.2;
+      color: rgb(29, 20, 87);
+      & span {
+        line-height: 1.5;
+        font-size: 24px;
+      }
+
+      &.require {
+        color: red;
+      }
+    }
+    .image {
+      margin: 8px 0 12px 64px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 160px;
+
+      img {
+        height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+      }
+
+      &.loading {
+        opacity: 0.1;
+      }
+    }
+
+    .radio-item {
+      font-size: 14px;
+
+      &.selected {
+        &.wrong {
+          color: red;
+        }
+        &.correct {
+          color: green !important;
+          font-weight: 600;
+        }
+      }
+      &.correct {
+        font-size: 18px;
+        color: rgb(27, 27, 117);
+        font-weight: 600;
+      }
+    }
+
+    .explain {
+      margin-top: 12px;
+      margin-left: 8px;
+      font-size: 14px;
+      color: #e1a310;
+    }
+  }
+
+  .bottom {
+    .concluse {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      text-transform: uppercase;
+      color: red;
+      margin-right: 8px;
+
+      &.ok {
+        color: #2b9d1b;
+      }
+    }
+  }
+}

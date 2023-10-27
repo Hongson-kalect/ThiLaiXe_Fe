@@ -1,0 +1,18 @@
+.tip-page {
+  ol,
+  ul {
+    li {
+      margin: 8px 0px 8px 32px;
+    }
+  }
+
+  p {
+    margin: 8px 0px 8px 4px;
+  }
+
+  .body {
+    & > div > p:last-child {
+      margin-bottom: 32px;
+    }
+  }
+}

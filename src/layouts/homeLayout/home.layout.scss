@@ -1,0 +1,49 @@
+@import "./../../assets/font/global.scss";
+
+.home-layout {
+  & > .top {
+    background-color: $main-background;
+  }
+  & > .body {
+    position: relative;
+    & > .left-nav {
+      background-color: $main-background;
+    }
+    & > .content {
+      background-color: $main-background !important;
+    }
+    & > .right-nav {
+      background-color: $main-background;
+    }
+  }
+  & > .bottom {
+    background-color: $main-background;
+  }
+}
+
+.top {
+}
+
+.home-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 20px;
+
+  .title {
+    cursor: pointer;
+    font-weight: 600 !important;
+    color: $primary-color;
+  }
+  .options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 8px;
+
+    .ant-avatar {
+      cursor: pointer;
+    }
+  }
+}
