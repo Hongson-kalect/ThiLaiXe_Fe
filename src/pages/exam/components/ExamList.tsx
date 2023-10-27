@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { Button, Tooltip } from "antd";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { CustomTable } from "src/components/CustomTable/CustomTable";
 import { CustomTitle } from "src/components/CustomText/CustomText";
 import { CustomFlexBox } from "src/components/FlexBox/FlexBox";
@@ -58,7 +59,10 @@ export function ExamList(props: IExamListProps) {
   ];
 
   const handleDeleteExam = async (id: number) => {
-    await examUtil.deleteExam(id);
+    if (window.confirm("Xóa câu hỏi này?")) {
+      const data = await examUtil.deleteExam(id);
+      if (data.status === 200) toast.success("Xóa thành công");
+    }
   };
 
   const getExamQuery = async () => {

@@ -23,8 +23,10 @@ export function QuestionItem({ question, index }: IQuestionItemProps) {
   const { role } = useAppSelector(selectUserInfo);
 
   const handleDeleteQuestion = async (id: number) => {
-    const data = await deleteQuestionUtil({ id });
-    if (data.status === 200) toast.success("Xóa thành công");
+    if (window.confirm("Xóa câu hỏi này?")) {
+      const data = await deleteQuestionUtil({ id });
+      if (data.status === 200) toast.success("Xóa thành công");
+    }
   };
 
   return (
