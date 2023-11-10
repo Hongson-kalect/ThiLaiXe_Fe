@@ -17,8 +17,6 @@ export function ResultModal({ exam, onCancel }: IResultModalProps) {
   const [type] = useState(getLocalStorage(constants.LOCALSTORAGE.examType));
   const navigate = useNavigate();
 
-  console.log(exam);
-
   const [result] = useState(() => {
     let beOk = false;
     if (typeof exam.score === "number") {
@@ -67,17 +65,25 @@ export function ResultModal({ exam, onCancel }: IResultModalProps) {
           </p>
           <p>
             Bạn đã trả lời{" "}
-            {exam.isFailAtRequire ? (
-              <b style={{ color: "red", fontSize: "24px", fontWeight: "bold" }}>
-                {" Sai "}
-              </b>
-            ) : (
-              <b
-                style={{ color: "green", fontSize: "24px", fontWeight: "bold" }}
-              >
-                {" Đúng "}
-              </b>
-            )}
+            {typeof exam.isFailAtRequire !== "undefined" ? (
+              exam.isFailAtRequire ? (
+                <b
+                  style={{ color: "red", fontSize: "24px", fontWeight: "bold" }}
+                >
+                  {" Sai "}
+                </b>
+              ) : (
+                <b
+                  style={{
+                    color: "green",
+                    fontSize: "24px",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {" Đúng "}
+                </b>
+              )
+            ) : null}
             câu điểm liệt
           </p>
           {result !== undefined ? (

@@ -66,6 +66,7 @@ export const Layout = styled(LayoutRender)`
   display: flex;
   flex-direction: column;
   height: ${(props) => (props.noParent ? "100vh" : "100%")};
+  min-height: ${(props) => (props.noParent ? "100vh" : "100%")};
   width: ${(props) => (props.noParent ? "100vw" : "100%")};
   row-gap: ${(props) => props.layoutGap || "0px"};
   ${(props) => (props.height ? `height: ${props.height}` : null)};

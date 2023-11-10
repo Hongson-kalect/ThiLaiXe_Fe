@@ -59,7 +59,7 @@ export function ExamList(props: IExamListProps) {
   ];
 
   const handleDeleteExam = async (id: number) => {
-    if (window.confirm("Xóa câu hỏi này?")) {
+    if (window.confirm("Xóa đề thi này?")) {
       const data = await examUtil.deleteExam(id);
       if (data.status === 200) toast.success("Xóa thành công");
     }

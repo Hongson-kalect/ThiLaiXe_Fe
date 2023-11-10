@@ -10,9 +10,23 @@
   z-index: 9999;
   font-size: 48px;
   font-weight: bold;
-  color: white;
+  color: rgb(61, 20, 20);
+  opacity: 0;
+  animation: flicker 3s infinite;
 
   &.spin {
     background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

@@ -14,7 +14,8 @@ import config from "src/configs";
 import constants from "src/constants";
 import { useNavigate } from "react-router-dom";
 import { appSlice } from "src/redux/slices/app.slice";
-import { useAppDispatch } from "src/redux/store";
+import { useAppDispatch, useAppSelector } from "src/redux/store";
+import { selectUserInfo } from "src/redux/selector/app.selector";
 
 export interface ITestListProps {
   // examList:any[]
@@ -23,7 +24,7 @@ export interface ITestListProps {
 
 export default function TestList(props: ITestListProps) {
   const dispatch = useAppDispatch();
-  const [isLogin] = React.useState(false);
+  const { isLogin } = useAppSelector(selectUserInfo);
   const navigate = useNavigate();
 
   const getExamsFn = async () => {
@@ -51,7 +52,6 @@ export default function TestList(props: ITestListProps) {
 
   const handleChooseExam = (id: number) => {
     // check localStorage not disable login warning
-    const isLogin = getLocalStorage(constants.LOCALSTORAGE.token);
     const loginTosaveNotify = getLocalStorage(
       constants.LOCALSTORAGE.loginToSaveNotify
     );
